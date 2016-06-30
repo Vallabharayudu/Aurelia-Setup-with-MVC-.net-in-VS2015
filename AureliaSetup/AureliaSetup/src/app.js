@@ -1,23 +1,11 @@
 export class App {
-    constructor(){
-        this.Sirname='Ikkurthi';
-        this.message = 'Welcome to Aurelia!';
-        this.firstName = 'Vallabha';
-        this.lastName ='Rayudu';
-        this.friends= [];
-        this.potentialFriend = '';
-    }
+    configureRouter(config, router){
+        config.title = 'Aurelia';
+        config.map([
+          { route: ['','welcome'],  name: 'welcome',  moduleId: './welcome',  nav: true, title:'Welcome' },
+          { route: 'Bindable',  name: 'Bindable',  moduleId: './Bindable',  nav: true, title:'Bindable Custom Element' }
+        ]);
 
-    addFriend(){
-        if(this.potentialFriend){
-            this.friends.push(this.potentialFriend);
-        }
-        this.potentialFriend='';
+        this.router = router;
     }
-
-    get fullName() {
-        return `${this.Sirname} ${this.firstName} ${this.lastName}`;
-    }
-    
-    
 }

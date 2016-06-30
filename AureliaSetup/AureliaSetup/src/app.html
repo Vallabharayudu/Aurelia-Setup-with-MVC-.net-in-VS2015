@@ -1,25 +1,7 @@
 <template>
-    <h1>${message}</h1>
-    SirName:
-    <input value.one-time="Sirname" />
-    <br />
-    First Name:
-    <input value.bind="firstName" />
-    <br />
-    Last Name:
-    <input value.bind="lastName" />
-    <br />
-    full name: ${fullName}
-    <br />
-    Friend's name:
-    <input value.bind="potentialFriend" />
-    <button click.trigger="addFriend()">Add Friend</button>
-    <ul>
-        <li repeat.for="friend of friends">
-            ${friend}
-        </li>
-    </ul>
-    <input type="checkbox" ref="recursive" />Repeat Details usinf checkbox custom element
-    <app if.bind="recursive.checked"></app>
-    <!--<compose view-modal.bind="someProp" if.bind="recursive.checked"></compose>-->
+    <compose view="nav-bar.html"></compose>
+
+    <div class="page-host">
+        <router-view></router-view>
+    </div>
 </template>
