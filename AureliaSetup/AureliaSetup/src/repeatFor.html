@@ -1,0 +1,25 @@
+﻿<template>
+    <require from="repeatFor.css"></require>
+    <div class="AlignedCenterSection container">
+
+
+        <h1>${headerOfPage}</h1>
+        <div class="ListOfAddedTodos">
+            <div repeat.for="todo of todos">
+                <input type="checkbox" checked.bind="todo.completed" />
+                ${todo.text}
+                <a class="glyphicon glyphicon-remove" click.trigger="removeTodo(todo)"></a>
+            </div>
+        </div>
+
+
+        <div class="SectionForRepeatAdd">
+            <div class="form-inline">
+                <input style="margin-right:20px;" class="form-control" placeholder="Type and add" value.bind="newTodoText" keyup.trigger="doneTyping($event)" />
+                <button style="margin-right:20px;" class="btn btn-primary" click.trigger="addTodo()">Add Todo</button>
+                <button class="btn btn-primary" if.bind="todos.length > 1" click.trigger="completeAll()">Complete All</button>
+            </div>
+        </div>
+
+    </div>
+</template>

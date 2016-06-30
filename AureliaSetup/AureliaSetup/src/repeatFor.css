@@ -1,0 +1,16 @@
+﻿.AlignedCenterSection{
+    text-align:center;
+}
+.ListOfAddedTodos{
+    padding:20px;
+    width:520px;
+    border:1px solid #b7b7b7;
+    border-radius:10px;
+    min-height:300px;
+    margin:0 auto;
+}
+.SectionForRepeatAdd{
+    padding:20px 0;
+    margin-top:10px;
+}
+
