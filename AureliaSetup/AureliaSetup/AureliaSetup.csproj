@@ -270,6 +270,14 @@
     <Content Include="Scripts\_references.js" />
     <Content Include="src\app.html" />
     <Content Include="src\app.js" />
+    <Content Include="src\Bindable.html" />
+    <Content Include="src\Bindable.js" />
+    <Content Include="src\MainFiles.js" />
+    <Content Include="src\name-tag.css" />
+    <Content Include="src\name-tag.html" />
+    <Content Include="src\nav-bar.html" />
+    <Content Include="src\welcome.html" />
+    <Content Include="src\welcome.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
