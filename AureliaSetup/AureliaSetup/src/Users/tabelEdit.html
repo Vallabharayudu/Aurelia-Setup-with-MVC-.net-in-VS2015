@@ -1,0 +1,24 @@
+﻿<template>
+    <table>
+        <thead>
+            <tr>
+                <td>Planet</td>
+                <td>Diameter (mi)</td>
+                <td>Distance to Sun (mi)</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr repeat.for="planet of planets" click.delegate="$parent.edit(planet)">
+                <!-- read-only mode -->
+                <td if.bind="$parent.editing !== planet">${planet.name}</td>
+                <td if.bind="$parent.editing !== planet">${planet.diameter}</td>
+                <td if.bind="$parent.editing !== planet">${planet.distance}</td>
+
+                <!-- edit-mode -->
+                <td if.bind="$parent.editing === planet"><input value.bind="planet.name" type="text"></td>
+                <td if.bind="$parent.editing === planet"><input value.bind="planet.diameter" type="number"></td>
+                <td if.bind="$parent.editing === planet"><input value.bind="planet.distance" type="number"></td>
+            </tr>
+        </tbody>
+    </table>
+</template>

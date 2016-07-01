@@ -173,3 +173,66 @@ div.au-stagger {
     opacity: 1;
   }
 }
+
+.topGapFromNav{
+    margin-top:20px;
+}
+.ListOfUsers{
+    border:1px solid #b7b7b7;
+    
+}
+.EachUser{
+    border-bottom:1px solid #b7b7b7;
+    padding:10px 20px;
+}
+.inlineBlock{
+    display:inline-block;
+    vertical-align:middle;
+}
+.left{
+    float:left;
+}
+.right{
+    float:right;
+}
+.clear{
+    clear:both;
+}
+.EachUser .left{
+    width:90%;
+}
+.infoImg{
+    margin-top:10px;
+    width:25px;
+}
+.progress{
+    height:30px;
+    background:#fff;
+    border:1px solid #b7b7b7;
+    box-shadow:none;
+    border-radius:13px;
+}
+.progress-bar{
+    box-shadow:none;
+    background:#70509D;
+}
+.BolderText{
+    font-weight:bold;
+}
+.HeaderOfDetails{
+    margin:10px 0;
+    color:#0183d7;
+    font-weight:bold;
+    text-decoration:underline;
+}
+.tabel.borderLess > tbody > tr > td:first-child{
+    font-weight:bold;
+}
+.tabel.borderLess > tbody > tr > td{
+    border:none;
+    padding:10px 20px;
+    padding-left:0px;
+}
+.Bg_Highlight{
+    background:#D1E9F8;
+}

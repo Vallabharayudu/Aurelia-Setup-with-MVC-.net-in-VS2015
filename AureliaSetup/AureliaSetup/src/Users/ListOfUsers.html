@@ -1,0 +1,57 @@
+﻿<template>
+    <h1>${message}</h1>
+    <div class="container topGapFromNav">
+
+        <div class="col-md-6 col-lg-6">
+            <div class="ListOfUsers">
+                <div repeat.for="user of users" click.trigger="renderInRightPane(user)" class="EachUser ${user.ActiveControl ? 'Bg_Highlight' : ''}">
+                    <div class="left">
+                        <div style="margin-bottom:10px;"><span>${user.name}</span></div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow.bind="user.status"
+                                 aria-valuemin="0" aria-valuemax="100" css="width: ${user.status}%">
+                                <span class="sr-only">${user.status} Complete</span>
+                                Progress
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <img src="Content/images/RightArrow_Info.png" class="img-responsive infoImg" alt="click" />
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="col-md-6 col-lg-6">
+            <div>
+                <div class="UserdetilsInfo">
+                    <div class="HeaderOfDetails">${firstName} Details</div>
+                    <table class="tabel borderLess">
+                        <tr>
+                            <td><span>Designation</span></td>
+                            <td>${designation}</td>
+                        </tr>
+                        <tr>
+                            <td><span>Technologies</span></td>
+                            <td>${technologies}</td>
+                        </tr>
+                        <tr>
+                            <td><span>State</span></td>
+                            <td>${state}</td>
+                        </tr>
+                        <tr>
+                            <td><span>Country</span></td>
+                            <td>${country}</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="clearfix"></div>
+    </div>
+</template>

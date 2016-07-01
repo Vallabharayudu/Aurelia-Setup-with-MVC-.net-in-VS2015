@@ -270,12 +270,17 @@
     <Content Include="Scripts\_references.js" />
     <Content Include="src\app.html" />
     <Content Include="src\app.js" />
+    <Content Include="src\Users\ListOfUsers.html" />
+    <Content Include="src\Users\ListOfUsers.js" />
     <Content Include="src\Bindable.html" />
     <Content Include="src\Bindable.js" />
     <Content Include="src\MainFiles.js" />
     <Content Include="src\name-tag.css" />
     <Content Include="src\name-tag.html" />
     <Content Include="src\nav-bar.html" />
+    <Content Include="src\repeatFor.css" />
+    <Content Include="src\repeatFor.html" />
+    <Content Include="src\repeatFor.js" />
     <Content Include="src\welcome.html" />
     <Content Include="src\welcome.js" />
     <Content Include="Web.config" />
