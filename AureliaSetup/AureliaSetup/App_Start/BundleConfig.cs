@@ -49,6 +49,7 @@ namespace AureliaSetup
             bundles.Add(
                 new ScriptBundle("~/Scripts/vendor.js")
                     .Include("~/Scripts/Jquery/jquery-2.2.0.min.js")
+                    .Include("~/Scripts/Bootstrap/bootstrap.js")
 
                 );
         }

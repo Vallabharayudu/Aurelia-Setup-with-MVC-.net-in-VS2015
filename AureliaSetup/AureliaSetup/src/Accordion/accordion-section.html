@@ -1,0 +1,8 @@
+﻿<template>
+    <div class="headerOfAccordion" click.trigger="showContent()">${title}</div>
+    <div class="ContentOfAccordion" show.bind="isVisible">
+        <p>
+            <content></content>
+        </p>
+    </div>
+</template>

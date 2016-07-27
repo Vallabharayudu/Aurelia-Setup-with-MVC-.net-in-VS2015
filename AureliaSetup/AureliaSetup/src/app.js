@@ -6,7 +6,9 @@ export class App {
           { route: 'Bindable',  name: 'Bindable',  moduleId: './Bindable',  nav: true, title:'Bindable Custom Element' },
           { route: 'repeatFor',  name: 'repeatFor',  moduleId: './repeatFor',  nav: true, title:'RepeatFor' },
           { route: 'Users',  name: 'Users',  moduleId: './Users/ListOfUsers',  nav: true, title:'Users' },
-          { route: 'tabelEdit',  name: 'tabelEdit',  moduleId: './Users/tabelEdit',  nav: true, title:'Tabel Editor' }
+          { route: 'tabelEdit',  name: 'tabelEdit',  moduleId: './Users/tabelEdit',  nav: true, title:'Tabel Editor' },
+          { route: 'accordionUsage',  name: 'accordionUsage',  moduleId: './Accordion/accordionUsage',  nav: true, title:'accordionUsage' },
+          { route: 'bootstarpCollapse',  name: 'bootstarpCollapse',  moduleId: './Accordion/bootstarpCollapse',  nav: true, title:'bootstarpCollapse' }
 
 
         ]);

@@ -173,7 +173,12 @@ div.au-stagger {
     opacity: 1;
   }
 }
-
+.inline_block {
+    display: inline-block;
+}
+.align_Middle {
+    vertical-align: middle;
+}
 .topGapFromNav{
     margin-top:20px;
 }
@@ -235,4 +240,263 @@ div.au-stagger {
 }
 .Bg_Highlight{
     background:#D1E9F8;
+}
+accordion-section{
+    display:block;
+    margin-bottom:10px;
+    border:1px solid #b7b7b7;
+}
+.headerOfAccordion{
+    padding:5px;
+    background:#f5f5f5;
+}
+.headerOfAccordion:hover{
+   cursor:pointer;
+}
+.ContentOfAccordion{
+    border-top:1px solid #b7b7b7;
+    padding:15px;
+    height:auto;
+    -webkit-transition-timing-function: ease;
+       -o-transition-timing-function: ease;
+          transition-timing-function: ease;
+  -webkit-transition-duration: .35s;
+       -o-transition-duration: .35s;
+          transition-duration: .35s;
+  -webkit-transition-property: height, visibility;
+       -o-transition-property: height, visibility;
+          transition-property: height, visibility;
+}
+
+.FixedSearchSectionInAdmminLst {
+    background: #5a5a5a;
+    padding: 10px;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+}
+
+.SearchBarAdminlist {
+    width: calc(100% - 50px);
+}
+
+.filterIMGDiv {
+    width: 26px;
+    margin: 0px 10px;
+}
+
+.SearchBarAdminlist > input[type="search"] {
+    width: 100%;
+}
+
+.serachFilterImg {
+    width: 26px;
+}
+
+.AdminListSearch {
+    background-image: url('images/SearchBar.svg');
+    background-repeat: no-repeat;
+    background-position: 10px 10px;
+    background-size: 16px 16px;
+}
+
+    .AdminListSearch:focus {
+        background-image: none;
+    }
+
+.AllAdminLists {
+    border: 1px solid #F1F1F1;
+    border-top: 0;
+}
+
+.panel {
+    margin: 0px;
+    border: 0px;
+}
+
+.panel-group {
+    margin-bottom: 0px;
+}
+
+.adminlist-group {
+    padding-top: 60px;
+}
+
+.panel-group.adminlist-group .panel + .panel {
+    margin-top: 0px;
+}
+
+.adminlist-group .panel-heading {
+    padding: 0;
+    background: transparent;
+    border: 1px solid #f9f9f9;
+    position: relative;
+}
+
+.adminlist-group .panel:last-child .panel-heading {
+    border-bottom: 0px;
+}
+
+.CustomAnchor:hover, .CustomAnchor:focus {
+    text-decoration: none;
+}
+
+.adminlist-group .panel-heading > a {
+    padding: 5px 10px;
+    display: block;
+    background: transparent;
+    color: #999999;
+}
+
+.adminlist-group .panel-heading:hover > a {
+    background: #F2F2F2;
+    text-decoration: none;
+}
+
+.adminlist-group .panel-heading > a[aria-expanded="true"] {
+    background: #F2F2F2;
+    color: #4F4F4F;
+}
+
+.adminlist-group .panel-body {
+    padding: 0 2px;
+}
+
+.usersCount {
+    position: absolute;
+    right: 25px;
+    top: 5px;
+    background: #0183d7;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    width: 25px;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+}
+
+.RequestHeadText {
+    border-color: #0183d7;
+    color: #0183d7;
+    border-width: 1px 0px;
+    border-style: solid;
+    padding: 5px 0;
+}
+
+.leftPaddToTabel {
+    margin-left: 10%;
+}
+
+.listOfUserRequests {
+    padding: 20px 0;
+}
+
+.FixedTable {
+    width: 100%;
+}
+
+    .FixedTable tr td {
+        padding-bottom: 5px;
+    }
+
+        .FixedTable tr td:first-child {
+            width: 10%;
+        }
+
+        .FixedTable tr td:last-child {
+            width: 40%;
+            text-align: right;
+            padding-right: 10px;
+            padding-bottom: 0px;
+        }
+
+.Accept {
+    color: #57B947;
+}
+
+.deny {
+    color: #C22B2B;
+}
+
+.headerOfUserUpdates {
+    border-color: #0183d7;
+    color: #0183d7;
+    border-width: 1px 0px;
+    border-style: solid;
+    height: 34px;
+}
+
+    .headerOfUserUpdates .left {
+        padding: 5px 0;
+        width: 70%;
+        padding-left: 10%;
+    }
+
+    .headerOfUserUpdates .right {
+        width: 30%;
+        background: #0183d7;
+        height: 100%;
+        color: #fff;
+        padding: 5px 0;
+        text-align: center;
+    }
+
+.ActionButtonsSection {
+    margin: 10px 0 20px;
+}
+
+.UserActivitySection {
+    margin-top: 10px;
+    margin-left: 2.98%;
+    margin-bottom: 10px;
+}
+
+.eachUserAct {
+    padding-bottom: 5px;
+}
+
+.stausIMG {
+    width: 22px;
+    height: 18px;
+}
+.dropbtn {
+    padding: 5px 10px;
+    font-size: 15px;
+    border: none;
+    border-bottom: 1px solid #b7b7b7;
+    cursor: pointer;
+    height: 38px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.DropdownImgInRoleSelect {
+    /*position:absolute;
+    right:5px;
+    top:10px;*/
+    float: right;
+}
+
+.dropdown-content {
+    position: absolute;
+    background-color: #f9f9f9;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.list {
+    cursor: pointer;
+}
+
+.dropdown-content > div {
+    color: black;
+    padding: 12px 16px;
+}
+
+.dropdown .list:hover {
+    background-color: #f1f1f1;
 }

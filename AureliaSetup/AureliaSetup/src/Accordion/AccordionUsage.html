@@ -1,0 +1,26 @@
+﻿<template>
+    <h1>Referd from <a href="http://plnkr.co/edit/FGn5RR?p=preview" target="_blank">Dustin Davis</a></h1>
+    <require from="./accordion"></require>
+    <require from="./accordion-section"></require>
+    <accordion>
+        <accordion-section repeat.for="item of items" title.bind="item.name">
+            <table>
+                <tr><td>${item.name}</td></tr>
+                <tr><td>${item.status}</td></tr>
+                <tr><td>${item.designation}</td></tr>
+                <tr><td>${item.technologies}</td></tr>
+                <tr><td>${item.State}</td></tr>
+                <tr><td>${item.Country}</td></tr>
+            </table>
+        </accordion-section>
+        <!--<accordion-section title="Section 2">
+            Content area 2
+        </accordion-section>
+        <accordion-section title="Section 3">
+            Content area 3
+        </accordion-section>
+        <accordion-section title="Section 4">
+            Content area 4
+        </accordion-section>-->
+    </accordion>
+</template>

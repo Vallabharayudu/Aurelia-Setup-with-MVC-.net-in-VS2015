@@ -1,0 +1,144 @@
+﻿<template>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-lg-4 AllAdminLists">
+                <!--#region for Search Filter Section for Admin list-->
+                <div class="FixedSearchSectionInAdmminLst">
+                    <div class="SearchBarAdminlist inline_block align_Middle">
+                        <input type="search" class="AdminListSearch" />
+                    </div>
+                    <div class="inline_block align_Middle filterIMGDiv">
+                        <img class="img-responsive serachFilterImg" src="Content/images/SearchFilter.svg" alt="Filter Search" />
+                    </div>
+                </div>
+                <!--#endregion for Search Filter Section for Admin list-->
+
+                <div class="panel-group adminlist-group" id="accordion" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default" repeat.for="admin of adminlist">
+
+                        <div class="panel-heading" role="tab">
+
+                            <a class="collapsed CustomAnchor" data-toggle="collapse" data-parent="#accordion" href="#${$index}" aria-expanded.bind="$index == 0 ? 'true':'false'">
+                                ${admin.name}
+                            </a>
+                            <div class="usersCount">3</div>
+
+                        </div>
+
+                        <div id="${$index}" class="${$index == 0 ? 'panel-collapse collapse in': 'panel-collapse collapse'}">
+                            <div class="panel-body">
+
+                                <div class="UserRequestSection">
+                                    <div class="RequestHeadText">
+                                        <span class="leftPaddToTabel">New User Requests</span>
+                                    </div>
+                                    <div class="listOfUserRequests">
+                                        <table class="FixedTable">
+                                            <tr>
+                                                <td>&nbsp;</td>
+                                                <td>${admin.name}${$index}</td>
+                                                <td><span class="Accept">Accept</span>&nbsp; | &nbsp;<span class="deny">Deny</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>&nbsp;</td>
+                                                <td>${admin.name}${$index}</td>
+                                                <td><span class="Accept">Accept</span>&nbsp; | &nbsp;<span class="deny">Deny</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>&nbsp;</td>
+                                                <td>${admin.name}${$index}</td>
+                                                <td><span class="Accept">Accept</span>&nbsp; | &nbsp;<span class="deny">Deny</span></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+
+                                <div class="UsersUpdatesSection">
+
+                                    <div class="headerOfUserUpdates">
+                                        <div class="left">
+                                            <span>Users</span>
+                                        </div>
+                                        <div class="right">
+                                            <Sapn class="inline_block align_top" style="font-size:20px;font-weight:900;">+</Sapn> Add User
+                                        </div>
+                                        <div class="clear"></div>
+                                    </div>
+
+                                    <div class="UserActivitySection">
+                                        <div class="eachUserAct">
+                                            <div class="inline_block align_Middle StatusImage">
+                                                <img src="Content/images/Blocked_status.svg" class="BlockedStatusImg stausIMG" alt="blocked" />
+                                            </div>
+                                            <div class="inline_block align_Middle SatusName">
+                                                John Smith
+                                            </div>
+                                        </div>
+                                        <div class="eachUserAct">
+                                            <div class="inline_block align_Middle StatusImage">
+                                                <img src="Content/images/Active_status.svg" class="ActiveStatusImg stausIMG" alt="Activated" />
+                                            </div>
+                                            <div class="inline_block align_Middle SatusName">
+                                                John Doe
+                                            </div>
+                                        </div>
+                                        <div class="eachUserAct">
+                                            <div class="inline_block align_Middle StatusImage">
+                                                <img src="Content/images/Email_status.svg" class="EmailStatusImg stausIMG" alt="Activated" />
+                                            </div>
+                                            <div class="inline_block align_Middle SatusName">
+                                                John Smith
+                                            </div>
+                                        </div>
+                                        <div class="eachUserAct">
+                                            <div class="inline_block align_Middle StatusImage">
+                                                <img src="Content/images/Blocked_status.svg" class="BlockedStatusImg stausIMG" alt="blocked" />
+                                            </div>
+                                            <div class="inline_block align_Middle SatusName">
+                                                John Smith
+                                            </div>
+                                        </div>
+                                        <div class="eachUserAct">
+                                            <div class="inline_block align_Middle StatusImage">
+                                                <img src="Content/images/Active_status.svg" class="ActiveStatusImg stausIMG" alt="Activated" />
+                                            </div>
+                                            <div class="inline_block align_Middle SatusName">
+                                                John Doe
+                                            </div>
+                                        </div>
+                                        <div class="eachUserAct">
+                                            <div class="inline_block align_Middle StatusImage">
+                                                <img src="Content/images/Email_status.svg" class="EmailStatusImg stausIMG" alt="Activated" />
+                                            </div>
+                                            <div class="inline_block align_Middle SatusName">
+                                                John Smith
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-8 col-lg-8">
+                <div class="dropdown FullWidthDiv">
+
+                    <div click.delegate="RoleSelector()" class="dropbtn FullWidthDiv" id="RoleSelector" au-target-id="4">
+                        <div class="left selectedRole">${selectedRoleName}</div>
+                        <img class="DropdownImgInRoleSelect" src="Content/images/dropdown_caret.jpg" alt="dropdown" />
+                        <div class="clear"></div>
+                    </div>
+                    <div id="myDropdown" class="dropdown-content FullWidthDiv" show.bind="ifClick">
+                        <div class="list" repeat.for="role of roles" click.trigger="SelectMenu(role)">
+                            ${role.roleName}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</template>
