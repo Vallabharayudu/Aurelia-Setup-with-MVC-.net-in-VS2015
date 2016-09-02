@@ -1,4 +1,5 @@
 ﻿<template>
+    <require from="./custom-element"></require>
     <h1>${message}</h1>
     SirName:
     <input value.one-time="Sirname" />
@@ -20,6 +21,8 @@
         </li>
     </ul>
     <input type="checkbox" ref="recursive" />Repeat Details usinf checkbox custom element
-    <app if.bind="recursive.checked"></app>
+    <welcome if.bind="recursive.checked"></welcome>
+
+    <button click.trigger="gotoCustom()">Go to Custom Element with out nav menu</button>
 
 </template>

@@ -253,6 +253,7 @@
     <Content Include="Content\images\SearchBar.svg" />
     <Content Include="Content\images\SearchFilter.svg" />
     <Content Include="Content\styles.css" />
+    <Content Include="Content\summery.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -303,6 +304,8 @@
     <Content Include="src\Accordion\bootstarpCollapse.js" />
     <Content Include="src\app.html" />
     <Content Include="src\app.js" />
+    <Content Include="src\custom-element.html" />
+    <Content Include="src\custom-element.js" />
     <Content Include="src\Users\ListOfUsers.html" />
     <Content Include="src\Users\ListOfUsers.js" />
     <Content Include="src\Bindable.html" />
