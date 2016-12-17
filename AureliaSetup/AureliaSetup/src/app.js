@@ -9,7 +9,8 @@ export class App {
           { route: 'tabelEdit',  name: 'tabelEdit',  moduleId: './Users/tabelEdit',  nav: true, title:'Tabel Editor' },
           { route: 'accordionUsage',  name: 'accordionUsage',  moduleId: './Accordion/accordionUsage',  nav: true, title:'accordionUsage' },
           { route: 'bootstarpCollapse',  name: 'bootstarpCollapse',  moduleId: './Accordion/bootstarpCollapse',  nav: true, title:'bootstarpCollapse' },
-          { route: 'custom-element',  name: 'custom-element',  moduleId: './custom-element',  nav: true, title:'custom-element' }
+          { route: 'custom-element',  name: 'custom-element',  moduleId: './custom-element',  nav: true, title:'custom-element' },
+		  { route: 'treeAcc',  name: 'treeAcc',  moduleId: './treeAcc',  nav: true, title:'treeAcc' }
 
 
         ]);

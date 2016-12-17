@@ -1,0 +1,29 @@
+﻿<template>
+	<!--<div class="menu-item ${menu.isRoot ? 'menu-group-heading' : ''} ${expanded ? 'expanded' : ''}" click.delegate="toggleExpanded()">
+		<h4 class="menu-title">
+			${menu.name}
+		</h4>
+		<i class="menu-expander fa ${expanded ? 'fa-caret-down' : 'fa-caret-right'}" show.bind="hasChildren"></i>
+	</div>
+	<ul class="menu-item-list" show.bind="expanded">
+		<li class="" repeat.for="child of menu.children">
+			<menu-item menu.bind="child"></menu-item>
+		</li>
+	</ul>-->
+	<div class="panel-group" id="accordion${menu.parentId}">
+		<div class="panel panel-default">
+			<div class="menu-item ${menu.isRoot ? 'panel-heading' : ''}">
+				<h4 class="panel-title">
+					<a data-toggle="collapse" data-parent="#accordion${menu.parentId}" href="#${menu.id}">${menu.name}</a>
+
+				</h4>
+
+			</div>
+			<div class="panel-collapse collapse" id="${menu.id}">
+				<div class="" repeat.for="child of menu.children">
+					<menu-item menu.bind="child"></menu-item>
+				</div>
+			</div>
+		</div>
+	</div>
+</template>

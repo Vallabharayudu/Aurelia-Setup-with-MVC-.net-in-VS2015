@@ -304,8 +304,15 @@
     <Content Include="src\Accordion\bootstarpCollapse.js" />
     <Content Include="src\app.html" />
     <Content Include="src\app.js" />
+    <Content Include="src\appConfig.js" />
     <Content Include="src\custom-element.html" />
     <Content Include="src\custom-element.js" />
+    <Content Include="src\menu-item.html" />
+    <Content Include="src\menu-item.js" />
+    <Content Include="src\menu.css" />
+    <Content Include="src\menuEvents.js" />
+    <Content Include="src\treeAcc.html" />
+    <Content Include="src\treeAcc.js" />
     <Content Include="src\Users\ListOfUsers.html" />
     <Content Include="src\Users\ListOfUsers.js" />
     <Content Include="src\Bindable.html" />

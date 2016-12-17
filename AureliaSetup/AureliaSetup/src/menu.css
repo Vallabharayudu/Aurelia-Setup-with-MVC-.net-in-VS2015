@@ -1,0 +1,103 @@
+﻿.menu-group,
+.menu-group * {
+    border: 0px solid rgba(0,0,0,0.08);
+}
+
+.menu-group {
+    margin-bottom: 20px;
+    background-color: #fff;
+    border-width: 1px;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+}
+
+.menu-item {
+    cursor: pointer;
+    padding: 10px 15px;
+}
+
+    .menu-item:hover {
+        background-color: rgba(0,0,0,0.04);
+    }
+
+    .menu-item .menu-title {
+        float: left;
+    }
+
+    .menu-item .menu-expander {
+        float: right;
+        font-size: 16px;
+    }
+
+.menu-group-heading {
+    padding: 10px 15px;
+    border-bottom-width: 1px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    color: #333;
+    background-color: rgba(0,0,0,0.1);
+}
+    .menu-group-heading:hover {
+        background-color: rgba(0,0,0,0.1);
+    }
+
+    .menu-group-heading .menu-title {
+        font-size: 16px;
+    }
+
+.menu-title {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 14px;
+    color: inherit;
+}
+
+.menu-item-list {
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+    .menu-item-list li {
+        position: relative;
+        display: block;
+        background-color: transparent;
+        border-bottom-width: 1px;
+    }
+
+        .menu-item-list li:last-child {
+            border-bottom-width: 0;
+        }
+
+    /* add rules for nested menus */
+    .menu-item-list .menu-item.expanded {
+    }
+
+    .menu-item-list .menu-item-list {
+        background-color: rgba(0,0,0,0.03);
+        padding-left: 15px;
+        border-top-width: 1px;
+    }
+
+        .menu-item-list .menu-item-list li {
+        }
+
+            .menu-item-list .menu-item-list li:last-child {
+                border-bottom-width: 0;
+            }
+
+        .menu-item-list .menu-item-list .menu-item {
+            /*margin-left: -15px;*/
+        }
+
+/* add clearfix */
+.menu-item:before,
+.menu-item:after {
+    display: table;
+    content: " ";
+}
+
+.menu-item:after {
+    clear: both;
+}
+/* end clearfix */
