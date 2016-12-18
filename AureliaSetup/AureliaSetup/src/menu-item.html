@@ -12,14 +12,45 @@
 	</ul>-->
 	<div class="panel-group" id="accordion${menu.parentId}">
 		<div class="panel panel-default">
-			<div class="menu-item ${menu.isRoot ? 'panel-heading' : ''}">
-				<h4 class="panel-title">
+			<div class="menu-item ${menu.isDrillDown ? 'panel-heading' : ''}">
+				<div class="EachMiniQueueWithOutCollapse panel-title">
+					<a data-toggle="collapse" if.bind="menu.isDrillDown" data-parent="#accordion${menu.parentId}" href="#${menu.id}">${menu.name}</a>
+					<i class="menu-expander fa ${menu.isRoot ? 'fa-caret-down' : 'fa-caret-right'}" show.bind="menu.isDrillDown"></i>
+					<!--<span if.bind="current.hasChildren()" click.trigger="current.toggleNode()" class="${current.icon} left eachMinQueueCheckSection"></span>-->
+					<div class="left eachMinQueueCheckSection" if.bind="!menu.isDrillDown">
+						<label class="cb_control control--checkbox">
+							<input type="checkbox">
+							<span class="control__indicator"></span>
+						</label>
+					</div>
+					<div class="left">
+						<div class="TitleOfMinQueue">
+							<span class="fontBold">Order ${current.OrderId}-</span>
+							<span>${current.OrderType}</span>
+						</div>
+						<div class="SummeryOfMIniQueue lightFontForMInQueue">
+							Assigned by: ${current.AssignedName} ${current.AssignedTime}
+						</div>
+					</div>
+					<div class="right leftGaptoRightElement">
+						<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA4RpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDplY2M1YzQzNy0xZGVlLTRjODMtOTUwMS0wODA5ZTBiNTgzOTUiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NzRGNzhCQjZBQzkzMTFFNkI1QkZBMTE4MkUyMDA1RjciIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NzRGNzhCQjVBQzkzMTFFNkI1QkZBMTE4MkUyMDA1RjciIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKFdpbmRvd3MpIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6YjM3Y2Y5ZWMtOTk1NC00MjA3LTgyNWQtZmQ2NDQwODU5OWUzIiBzdFJlZjpkb2N1bWVudElEPSJhZG9iZTpkb2NpZDpwaG90b3Nob3A6N2Q3MDk4ZmItZTM5Ny0xMTc5LTkzMTUtZGQ2MDVjODBiY2E3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+pDpJTgAAANZJREFUeNpi/P//PwM1ABMDlQCjmZkFRQacPHkcxUXLgfgZEGsAsRUQvwfi/0Tgf+bmliC9DCxQg9yAWAiI9YFYCogFiPURVC/coEAgNgTidUDMCsRsQCxIhEEgV22nSRhRLdbyoYGcBcR8QNwPxNxEmrEZ6KpJsDBqAWIeIN4CDWx/EhwDcgncoBqoi7ZBXWRJgou2DO7AtoOmo2nQdJRLSjoCuuoQLIzWQ1P2c2hgd5DgmDQgFoZ5bTfUkEtAfAqIPxBpCMhFu5CzSASaAsEBC2yAAAMAUH07iQz8S4cAAAAASUVORK5CYII=" />
+					</div>
+					<div class="right leftGaptoRightElement">
+						<span class="DateOfMinQueue">${current.OpenDate}</span>
+						<img class="leftGaptoRightElement" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA4RpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDplY2M1YzQzNy0xZGVlLTRjODMtOTUwMS0wODA5ZTBiNTgzOTUiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NjNENEQ1M0RBQzkzMTFFNjlDODlFQzdDMDIwRDBFMzYiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NjNENEQ1M0NBQzkzMTFFNjlDODlFQzdDMDIwRDBFMzYiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKFdpbmRvd3MpIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6YjM3Y2Y5ZWMtOTk1NC00MjA3LTgyNWQtZmQ2NDQwODU5OWUzIiBzdFJlZjpkb2N1bWVudElEPSJhZG9iZTpkb2NpZDpwaG90b3Nob3A6N2Q3MDk4ZmItZTM5Ny0xMTc5LTkzMTUtZGQ2MDVjODBiY2E3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+hjx4dAAAATtJREFUeNpiNDOzYKAEnDx5HEwzkmmQKxBPBGJZIN4GxNksZBgC0rweiLmh/DAg5mAiwyB7JENgwJ0UF4Es9QHiDCxyd4lxkQAQFwHxbSDeCHXNKiT5d+hhBPKrLxDfB+JeIJYE4jwgjgViTmi4JAHxQaj6ViBWBOIjwJh7C4u1GiBuRjL0AxDzQ22bC8RTgfgRvuiHuagAi3cmAXElEH8jNgBB4BcWuX+gdEZKTIDAdDTx90CcD8SPgbgLiOUJGYScskGB7YcU2BJQw0CBzQEN7MlAfAiqXgeaOE8Aw+k9MVkEFF6pQJwFxApAfA6aFMKRoj+YlLzGDMQBQFwOxKZocteYpaVliDXoPxBfB+LPQByCJsdHTl47DMRf0cR2kmPQUyAOBOKb0GSzBoiTWcgsz3YDsQZyygYIMACCOUVmhhs8fAAAAABJRU5ErkJggg==" />
+						<div class="lightFontForMInQueue rightAligned">${current.Progress}</div>
+					</div>
+					<div class="clear"></div>
+					<!--<span>${current.name}</span>-->
+				</div>
+				<!--<h4 class="panel-title">
+
 					<a data-toggle="collapse" data-parent="#accordion${menu.parentId}" href="#${menu.id}">${menu.name}</a>
 
-				</h4>
+				</h4>-->
 
 			</div>
-			<div class="panel-collapse collapse" id="${menu.id}">
+			<div class="panel-collapse collapse" id="${menu.id}" if.bind="menu.isDrillDown">
 				<div class="" repeat.for="child of menu.children">
 					<menu-item menu.bind="child"></menu-item>
 				</div>

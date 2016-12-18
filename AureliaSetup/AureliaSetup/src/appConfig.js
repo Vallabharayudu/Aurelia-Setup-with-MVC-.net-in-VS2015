@@ -63,7 +63,7 @@
 			  	"id": 3,
 			  	"isRoot": false,
 			  	"name": "French",
-			  	"isDrillDown": true,
+			  	"isDrillDown": false ,
 			  	"parentId": 1,
 			  	"associatedFilterId": null,
 			  	"children": null
